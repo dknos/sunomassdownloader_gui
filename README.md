@@ -9,13 +9,13 @@ Made by @mrbigpipesyt
 YouTube → https://www.youtube.com/@mrbigpipesyt  
 X/Twitter → https://x.com/mrbigpipesyt
 
-## ONE-CLICK .EXE (99% of people — do this)
+## ONE-CLICK .EXE — DO THIS (99% of people)
 
-1. Click this button → downloads one file  
-   [Download MrBigPipes_Suno_Vault.exe](https://github.com/your-username/MrBigPipes-Suno-Vault/releases/latest/download/MrBigPipes_Suno_Vault.exe)
+1. Click this big button → downloads the file instantly  
+   [**Download MrBigPipes_Suno_Vault.exe**](https://github.com/dknos/sunomassdownloader_gui/raw/main/MrBigPipes_Suno_Vault.exe)
 
-2. Double-click the file  
-   (If Windows cries → click **More info** → **Run anyway**)
+2. Double-click the downloaded file  
+   (Windows says “unknown app”? → click **More info** → **Run anyway**)
 
 3. Red & black window opens instantly
 
@@ -28,26 +28,23 @@ All songs land on your Desktop in the folder **MrBigPipes Vault** — ready to p
 
 You now own your music forever.
 
-## PYTHON VERSION (only if you want to run from source)
+## Want the Python version instead?
 
-1. Install Python → https://python.org → big yellow button → **tick “Add to PATH”** → Install Now
-2. Download this repo → unzip to Desktop
-3. Win + R → type `cmd` → Enter → paste these two lines:
+Only if you’re a nerd or the .exe gets blocked:
+
+1. Install Python → https://python.org → big yellow button → tick **“Add to PATH”** → Install Now
+2. Download this repo → unzip anywhere
+3. Open Command Prompt → paste these lines:
    ```cmd
-   cd Desktop\MrBigPipes-Suno-Vault
+   cd Desktop\sunomassdownloader_gui-main
    pip install -r requirements.txt
+   python suno_gui_downloader.py
 
-Then run:cmd
-
-python suno_gui_downloader.py
-
-Same app, same result.Token Guide (works 100% right now — December 2025)suno.com → log in  
-F12 → Network → type v3 in filter  
-Play any song  
-Click any v3 request → Request Headers  
-Copy the long string after Authorization: Bearer
-
-Go smash subscribe → https://www.youtube.com/@mrbigpipesyt
+Same app, same result.Token Guide (works 100% — December 2025)suno.com → log in
+F12 → Network → type v3 in filter
+Play any song
+Click any v3 request → Request Headers
+Copy the long string after Authorization: BearerGo smash subscribe → https://www.youtube.com/@mrbigpipesyt
 — @mrbigpipesyt
  2025
 
