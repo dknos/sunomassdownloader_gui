@@ -1,0 +1,4 @@
+# MrBigPipes Suno Vault — dependencies only
+requests>=2.32.0
+mutagen>=1.47.0
+# That's literally it. No bloat, no trash.
