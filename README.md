@@ -1,96 +1,44 @@
-### Dead-Simple Instructions (Exactly How We Did It)
+MrBigPipes Suno Vault — 2025The only Suno downloader you’ll ever needDownload every single song you’ve ever made on Suno — in 60 seconds.
+Full MP3s + album art + perfect titles.
+Works even if you’ve never touched code.Made by @mrbigpipesyt
 
-1. **Create a folder on your Desktop**  
-   Name it anything you want (example: `MrBigPipes Suno Vault` or `sunogui`)
+YouTube → https://www.youtube.com/@mrbigpipesyt
+X/Twitter → https://x.com/mrbigpipesyt
+Option 1 — ONE-CLICK .EXE (Recommended — 99% of people)Click this button → downloads one file
+Download MrBigPipes_Suno_Vault.exe
+(If Windows says “unknown app” → click More info → Run anyway)
+Double-click the file → red & black window opens instantly
+Get your token (15 seconds)
+→ suno.com → F12 → Network → type v3 → play song → copy after Bearer
+Click PASTE → START RAID
+→ All songs land in Desktop\MrBigPipes Vault
 
-2. **Put these 2 files inside that folder**
-   - `suno_gui_downloader.py`  ← the full script I just gave you
-   - `requirements.txt`        ← contains just these 2 lines:
-     ```
-     requests
-     mutagen
-     ```
+Done. Zero Python. Zero commands.Option 2 — PYTHON VERSION (for power users or if you want to run from source)Step 1 — Install Python (once ever)Go here → https://www.python.org/downloads/
+Click the big yellow Download Python button
+Run the file
+SUPER IMPORTANT → Tick “Add python.exe to PATH” → Install Now
+Close everything
 
-3. **Open Command Prompt**
-   - Press **Win + R** → type `cmd` → press Enter
+Step 2 — Get the filesDownload this repo (green “Code” button → Download ZIP)
+Extract to Desktop → folder called something like MrBigPipes-Suno-VaultStep 3 — Install the two tiny toolsPress Win + R → type cmd → Enter
+Copy-paste these two lines (press Enter after each):
 
-4. **Go to your folder** (copy-paste this line and press Enter)
+cmd
 
-   cd Desktop\sunogui
+cd Desktop\MrBigPipes-Suno-Vault
+pip install -r requirements.txt
 
-(or whatever you named the folder — just replace `sunogui`)
+Step 4 — Run itIn the same black window type:cmd
 
-5. **Install the two tiny tools** (copy-paste and Enter)
+python suno_gui_downloader.py
 
-   pip install -r requirements.txt
+GUI opens → same as the .exe → paste token → START RAIDSame result. Your choice.Token Guide (works 100% in December 2025)suno.com → log in  
+Press F12 → Network tab  
+Type v3 in the filter  
+Play any song  
+Click a request with “v3” → Request Headers  
+Copy the long string after Authorization: Bearer
 
-6. **Get your token (December 2025 method)**
-- Go to suno.com → log in
-- Press F12 → Network tab
-- Type `v3` in the filter box
-- Play any song
-- Click any request with “v3” in the name
-- Scroll to Request Headers → copy the long string after `Authorization: Bearer `
-
-7. **Run the program** (copy-paste and Enter)**
-
-   python suno_gui_downloader.py
-
-The red & black GUI opens → click **PASTE** → click **START RAID** → done.
-
-All songs land in a folder called “MrBigPipes Vault” on your Desktop with covers and covers.
-
-Full Final README.md (copy-paste this entire thing)markdown
-
-# MrBigPipes Suno Vault — 2025 Private Edition
-
-The hardest Suno downloader on the planet.  
-Red & black. No bloat. Your songs forever.
-
-## Dead-Simple Instructions (Exactly How We Did It)
-
-1. **Create a folder on your Desktop**  
-   Name it anything (example: `MrBigPipes Suno Vault` or `sunogui`)
-
-2. **Put these 2 files inside**
-   - `suno_gui_downloader.py`  ← full working script
-   - `requirements.txt`
-     ```
-     requests
-     mutagen
-     ```
-
-3. **Open Command Prompt**  
-   Win + R → type `cmd` → Enter
-
-4. **Go to your folder** (copy-paste + Enter)
-
-   cd Desktop\sunogui
-
-(change `sunogui` to whatever you named it)
-
-5. **Install the two tools** (copy-paste + Enter)
-
-   pip install -r requirements.txt
-
-6. **Get your token (December 2025 — works 100%)**
-- suno.com → log in
-- F12 → Network tab
-- Type `v3` in filter
-- Play any song
-- Click a `v3` request → Request Headers
-- Copy string after `Authorization: Bearer `
-
-7. **Run it** (copy-paste + Enter)
-
-   python suno_gui_downloader.py
-
-GUI opens → click **PASTE** → click **START RAID**
-
-All songs appear on your Desktop in “MrBigPipes Vault” with album art and perfect titles.
-
-You now own your music forever.  
-No more begging Suno.
-
-— MrBigPipes 2025
+You now own your music forever.Go smash subscribe → https://www.youtube.com/@mrbigpipesyt— @mrbigpipesyt
+ 2025
 
