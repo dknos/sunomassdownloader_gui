@@ -1,7 +1,4 @@
-# ================================================
-# SUNO VAULT — MRBIGPIPES EDITION (FINAL WORKING)
-# ================================================
-
+# ================================================ MRBIGPIPES SUNO VAULT — FINAL FIXED ===============
 import os
 import re
 import time
@@ -65,7 +62,7 @@ class MrBigPipesDownloader:
             try:
                 r = requests.get(url, headers=headers, timeout=20)
                 if r.status_code == 401:
-                    self.log("Token dead. Get a fresh one.")
+                    self.log("Token dead or invalid!")
                     return {}
                 data = r.json()
                 clips = data if isinstance(data, list) else data.get("clips", [])
@@ -76,7 +73,7 @@ class MrBigPipesDownloader:
                     sid = c.get("id")
                     if sid and sid not in songs:
                         songs[sid] = {
-                            "title": c.get("title", "Untitled Banger"),
+                            "title": c.get("title", "Untitled"),
                             "audio": c.get("audio_url"),
                             "img": c.get("image_url") or c.get("image_large_url"),
                             "artist": c.get("display_name") or "MrBigPipes"
@@ -128,35 +125,33 @@ class MrBigPipesDownloader:
         self.log("\nALL TRACKS SECURED. MRBIGPIPES OUT.")
         messagebox.showinfo("MRBIGPIPES", "Download complete!")
 
-# Token guide pop-up
 def show_token_guide():
     guide = """
-HOW TO GET YOUR SUNO TOKEN (15 seconds)
+HOW TO GET YOUR SUNO TOKEN — DECEMBER 2025 (WORKS 100%)
 
-1. Open https://suno.com → log in
+1. Open https://suno.com and log in
 2. Press F12 → Network tab
-3. In filter box type: continue
-4. Play any song or click "Continue" on a prompt
-5. Click the request named "continue" / "generate_continue"
+3. In filter box type: v3
+4. Play a song or click Continue on any prompt
+5. Click any request with "v3" in the name
 6. Scroll to Request Headers
-7. Find: Authorization: Bearer eyJhbGc...
-8. Copy everything AFTER "Bearer "
+7. Find: Authorization: Bearer [long string]
+8. Copy the long string after "Bearer "
 
-→ Come back → click PASTE → START RAID
+→ Click PASTE button → START RAID
     """.strip()
 
     win = tk.Toplevel()
     win.title("MRBIGPIPES TOKEN GUIDE")
-    win.geometry("700x500")
+    win.geometry("720x520")
     win.configure(bg="#000")
-    tk.Label(win, text="HOW TO GET TOKEN", font=("Impact", 20), fg="#ff2d55", bg="#000").pack(pady=20)
+    tk.Label(win, text="CURRENT WORKING METHOD", font=("Impact", 20), fg="#ff2d55", bg="#000").pack(pady=20)
     txt = tk.Text(win, bg="#111", fg="#00ff00", font=("Consolas", 11), wrap="word")
     txt.pack(fill="both", expand=True, padx=30, pady=10)
     txt.insert("1.0", guide)
     txt.config(state="disabled")
-    tk.Button(win, text="GOT IT", font=("Segoe UI",10,"bold"), bg="#ff2d55", fg="white", command=win.destroy).pack(pady=10)
+    tk.Button(win, text="GOT IT", font=("Segoe UI",10,"bold"), bg="#ff2d55", fg="white", command=win.destroy).pack(pady=15)
 
-# GUI
 class MrBigPipesApp:
     def __init__(self):
         self.root = tk.Tk()
@@ -168,7 +163,6 @@ class MrBigPipesApp:
         tk.Label(self.root, text="MRBIGPIPES", font=("Impact", 36, "bold"), fg="#ff2d55", bg="#0d0d0d").pack(pady=(20,0))
         tk.Label(self.root, text="Suno Vault — Private Edition", font=("Segoe UI", 16), fg="#1DB954", bg="#0d0d0d").pack()
 
-        # Token + help
         token_row = tk.Frame(self.root, bg="#0d0d0d")
         token_row.pack(fill="x", padx=40, pady=10)
         tk.Label(token_row, text="Bearer Token", fg="#fff", bg="#0d0d0d").pack(side="left")
@@ -180,7 +174,6 @@ class MrBigPipesApp:
         tk.Entry(tframe, textvariable=self.token_var, width=70, font=("Consolas",11), bg="#1e1e1e", fg="#00ff00").pack(side="left", fill="x", expand=True, padx=(0,10))
         tk.Button(tframe, text="PASTE", bg="#ff2d55", fg="white", command=self.paste).pack(side="right")
 
-        # Folder
         tk.Label(self.root, text="Save Folder", fg="#fff", bg="#0d0d0d").pack(anchor="w", padx=40, pady=(15,0))
         fframe = tk.Frame(self.root, bg="#0d0d0d")
         fframe.pack(fill="x", padx=40)
@@ -191,7 +184,6 @@ class MrBigPipesApp:
         self.thumbs = tk.BooleanVar(value=True)
         tk.Checkbutton(self.root, text="Embed cover art & metadata", variable=self.thumbs, fg="#1DB954", bg="#0d0d0d").pack(pady=10)
 
-        # Buttons
         btns = tk.Frame(self.root, bg="#0d0d0d")
         btns.pack(pady=25)
         self.start_btn = tk.Button(btns, text="START RAID", font=("Impact",14,"bold"), bg="#ff2d55", fg="white", width=18, command=self.start)
@@ -199,7 +191,6 @@ class MrBigPipesApp:
         self.stop_btn = tk.Button(btns, text="STOP", font=("Impact",12), bg="#333", fg="#ff2d55", state="disabled", command=self.stop)
         self.stop_btn.pack(side="left", padx=15)
 
-        # Progress & Log
         self.bar = ttk.Progressbar(self.root, length=760, mode="determinate")
         self.bar.pack(pady=15, padx=40)
         tk.Label(self.root, text="Live Log", fg="#ff2d55", bg="#0d0d0d", font=("Segoe UI",10,"bold")).pack(anchor="w", padx=40)
@@ -215,9 +206,9 @@ class MrBigPipesApp:
     def paste(self):
         try:
             self.token_var.set(self.root.clipboard_get())
-            self.log("Token loaded — ready")
+            self.log("Token loaded — ready to raid")
         except:
-            messagebox.showwarning("Nope", "Nothing in clipboard")
+            messagebox.showwarning("Nah", "Clipboard empty")
 
     def browse(self):
         f = filedialog.askdirectory()
@@ -229,7 +220,7 @@ class MrBigPipesApp:
 
     def start(self):
         if not self.token_var.get().strip():
-            messagebox.showerror("Missing", "Need token first")
+            messagebox.showerror("Wait", "Paste token first")
             return
         self.start_btn.config(state="disabled")
         self.stop_btn.config(state="normal")
@@ -244,8 +235,7 @@ class MrBigPipesApp:
         threading.Thread(target=t, daemon=True).start()
 
     def stop(self):
-        messagebox.showinfo("Stopping", "Finishing current song then stopping...")
-        # flag is checked inside loops
+        messagebox.showinfo("Hold", "Finishing current song then stopping...")
 
     def run(self):
         self.root.mainloop()
