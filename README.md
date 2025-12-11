@@ -48,3 +48,6 @@ Copy the long string after Authorization: BearerGo smash subscribe → https://w
 — @mrbigpipesyt
  2025
 
+Buy me a coffee!
+Solana: 6GeYvo58ohRSZQfqB8JwVHF5dgeXaZEm6K68yNWTiBNd
+ETH: 0x9e8d0e9d9ffba1e49ff6361560bd05a2bc5807c2
