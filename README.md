@@ -1,67 +1,96 @@
-MrBigPipes Suno VaultFull Dummy-Proof Installation & Usage Guide
-(Updated for December 2025 — 100% working)markdown
+### Dead-Simple Instructions (Exactly How We Did It)
 
-# MrBigPipes Suno Vault — Full Setup Guide (Windows 11/10 · December 2025
+1. **Create a folder on your Desktop**  
+   Name it anything you want (example: `MrBigPipes Suno Vault` or `sunogui`)
 
-You are 7 minutes away from owning every single Suno song you’ve ever made — offline, forever, with covers and perfect metadata.
+2. **Put these 2 files inside that folder**
+   - `suno_gui_downloader.py`  ← the full script I just gave you
+   - `requirements.txt`        ← contains just these 2 lines:
+     ```
+     requests
+     mutagen
+     ```
 
-## 1. Install Python (one-time, 2 minutes)
+3. **Open Command Prompt**
+   - Press **Win + R** → type `cmd` → press Enter
 
-1. Go here → https://www.python.org/downloads/
-2. Click the big yellow button **Download Python 3.12.x** (or newer)
-3. Run the installer
-4. VERY IMPORTANT → **Tick the box “Add python.exe to PATH”** (bottom of first screen)
-5. Click **Install Now** → finish → close
+4. **Go to your folder** (copy-paste this line and press Enter)
 
-Test it:
-- Press **Win + R** → type `cmd` → press Enter
-- Type: `python --version`
-- If it shows “Python 3.12.x” → you’re good. Close the window.
+   cd Desktop\sunogui
 
-## 2. Create Your Folder & Get the Files
+(or whatever you named the folder — just replace `sunogui`)
 
-1. On your Desktop, right-click → New → Folder → name it exactly:  
-   `MrBigPipes Suno Vault`
-2. Put these 3 files inside it (create them with Notepad):
+5. **Install the two tiny tools** (copy-paste and Enter)
 
-### File 1: `suno_gui_downloader.py`
-→ Paste the full working script I gave you last time (the one with the fixed tkinter import)
+   pip install -r requirements.txt
 
-### File 2: `requirements.txt`
-```txt
-requests>=2.32.0
-mutagen>=1.47.0
+6. **Get your token (December 2025 method)**
+- Go to suno.com → log in
+- Press F12 → Network tab
+- Type `v3` in the filter box
+- Play any song
+- Click any request with “v3” in the name
+- Scroll to Request Headers → copy the long string after `Authorization: Bearer `
 
-File 3: README.md (optional, but nice)You’re reading it right now3. Install the 2 required libraries (30 seconds)Open Command Prompt (Win + R → cmd → Enter)
-Type these 2 lines (press Enter after each):
+7. **Run the program** (copy-paste and Enter)**
 
-cmd
+   python suno_gui_downloader.py
 
-cd Desktop\"MrBigPipes Suno Vault"
-pip install -r requirements.txt
+The red & black GUI opens → click **PASTE** → click **START RAID** → done.
 
-You’ll see stuff downloading → ends with “Successfully installed”.4. Get Your Suno Token (December 2025 method — works 100%)Open Chrome/Edge → go to https://suno.com → log in
-Press F12 → click Network tab
-In the filter box type exactly: v3
-Now play any song OR click “Continue” on any prompt
-Click any request that has v3 in the name (example: v3/songs, v3/feed)
-In the right panel → scroll to Request Headers
-Find the line:
+All songs land in a folder called “MrBigPipes Vault” on your Desktop with covers and covers.
 
-Authorization: Bearer eyJhbGciOi...
+Full Final README.md (copy-paste this entire thing)markdown
 
-Copy only the long string after “Bearer ” → paste it into Notepad
+# MrBigPipes Suno Vault — 2025 Private Edition
 
-You now have your token. It lasts months.5. Run the Downloader (the fun part)In the same Command Prompt window, type:cmd
+The hardest Suno downloader on the planet.  
+Red & black. No bloat. Your songs forever.
 
-python suno_gui_downloader.py
+## Dead-Simple Instructions (Exactly How We Did It)
 
-The red & black MrBigPipes GUI will pop up.Inside the GUI:Click HELP – HOW TO GET TOKEN if you’re lost
-Click PASTE → your token appears in green
-Leave folder as MrBigPipes Vault (or click BROWSE)
-Make sure “Embed cover art & metadata” is ticked
-Click START RAID
+1. **Create a folder on your Desktop**  
+   Name it anything (example: `MrBigPipes Suno Vault` or `sunogui`)
 
-Watch the green log fly. Go make coffee. When it says “ALL TRACKS SECURED”, you’re done.All files → Desktop\MrBigPipes Vault → perfect MP3s with album art.You’re now immune to Suno deleting your songs ever again.Enjoy your empire.
+2. **Put these 2 files inside**
+   - `suno_gui_downloader.py`  ← full working script
+   - `requirements.txt`
+     ```
+     requests
+     mutagen
+     ```
+
+3. **Open Command Prompt**  
+   Win + R → type `cmd` → Enter
+
+4. **Go to your folder** (copy-paste + Enter)
+
+   cd Desktop\sunogui
+
+(change `sunogui` to whatever you named it)
+
+5. **Install the two tools** (copy-paste + Enter)
+
+   pip install -r requirements.txt
+
+6. **Get your token (December 2025 — works 100%)**
+- suno.com → log in
+- F12 → Network tab
+- Type `v3` in filter
+- Play any song
+- Click a `v3` request → Request Headers
+- Copy string after `Authorization: Bearer `
+
+7. **Run it** (copy-paste + Enter)
+
+   python suno_gui_downloader.py
+
+GUI opens → click **PASTE** → click **START RAID**
+
+All songs appear on your Desktop in “MrBigPipes Vault” with album art and perfect titles.
+
+You now own your music forever.  
+No more begging Suno.
+
 — MrBigPipes 2025
 
