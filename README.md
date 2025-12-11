@@ -1,44 +1,53 @@
-MrBigPipes Suno Vault — 2025The only Suno downloader you’ll ever needDownload every single song you’ve ever made on Suno — in 60 seconds.
-Full MP3s + album art + perfect titles.
-Works even if you’ve never touched code.Made by @mrbigpipesyt
+# MrBigPipes Suno Vault — 2025  
+**The only Suno downloader you’ll ever need**
 
-YouTube → https://www.youtube.com/@mrbigpipesyt
+Download every song you’ve ever made on Suno — in 60 seconds flat.  
+Full MP3 + album art + perfect titles.  
+Even if you’ve never touched code.
+
+Made by @mrbigpipesyt  
+YouTube → https://www.youtube.com/@mrbigpipesyt  
 X/Twitter → https://x.com/mrbigpipesyt
-Option 1 — ONE-CLICK .EXE (Recommended — 99% of people)Click this button → downloads one file
-Download MrBigPipes_Suno_Vault.exe
-(If Windows says “unknown app” → click More info → Run anyway)
-Double-click the file → red & black window opens instantly
-Get your token (15 seconds)
-→ suno.com → F12 → Network → type v3 → play song → copy after Bearer
-Click PASTE → START RAID
-→ All songs land in Desktop\MrBigPipes Vault
 
-Done. Zero Python. Zero commands.Option 2 — PYTHON VERSION (for power users or if you want to run from source)Step 1 — Install Python (once ever)Go here → https://www.python.org/downloads/
-Click the big yellow Download Python button
-Run the file
-SUPER IMPORTANT → Tick “Add python.exe to PATH” → Install Now
-Close everything
+## ONE-CLICK .EXE (99% of people — do this)
 
-Step 2 — Get the filesDownload this repo (green “Code” button → Download ZIP)
-Extract to Desktop → folder called something like MrBigPipes-Suno-VaultStep 3 — Install the two tiny toolsPress Win + R → type cmd → Enter
-Copy-paste these two lines (press Enter after each):
+1. Click this button → downloads one file  
+   [Download MrBigPipes_Suno_Vault.exe](https://github.com/your-username/MrBigPipes-Suno-Vault/releases/latest/download/MrBigPipes_Suno_Vault.exe)
 
-cmd
+2. Double-click the file  
+   (If Windows cries → click **More info** → **Run anyway**)
 
-cd Desktop\MrBigPipes-Suno-Vault
-pip install -r requirements.txt
+3. Red & black window opens instantly
 
-Step 4 — Run itIn the same black window type:cmd
+4. Get your token (15 seconds)  
+   → suno.com → log in → press **F12** → Network tab → type **v3** → play any song → click any v3 request → Request Headers → copy the long string after **Bearer**
+
+5. Click **PASTE** → click **START RAID**
+
+All songs land on your Desktop in the folder **MrBigPipes Vault** — ready to play anywhere.
+
+You now own your music forever.
+
+## PYTHON VERSION (only if you want to run from source)
+
+1. Install Python → https://python.org → big yellow button → **tick “Add to PATH”** → Install Now
+2. Download this repo → unzip to Desktop
+3. Win + R → type `cmd` → Enter → paste these two lines:
+   ```cmd
+   cd Desktop\MrBigPipes-Suno-Vault
+   pip install -r requirements.txt
+
+Then run:cmd
 
 python suno_gui_downloader.py
 
-GUI opens → same as the .exe → paste token → START RAIDSame result. Your choice.Token Guide (works 100% in December 2025)suno.com → log in  
-Press F12 → Network tab  
-Type v3 in the filter  
+Same app, same result.Token Guide (works 100% right now — December 2025)suno.com → log in  
+F12 → Network → type v3 in filter  
 Play any song  
-Click a request with “v3” → Request Headers  
+Click any v3 request → Request Headers  
 Copy the long string after Authorization: Bearer
 
-You now own your music forever.Go smash subscribe → https://www.youtube.com/@mrbigpipesyt— @mrbigpipesyt
+Go smash subscribe → https://www.youtube.com/@mrbigpipesyt
+— @mrbigpipesyt
  2025
 
